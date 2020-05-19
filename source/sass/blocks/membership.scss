@@ -1,0 +1,111 @@
+.membership {
+  background: #f8f9fc;
+  color: #102654;
+}
+
+.membership__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.membership h2 {
+  font-family: "BebasNeue-Regular", "Arial", sans-serif;
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  padding: 0;
+  margin: 0;
+  padding-top: 110px;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+// .membership__tabs {
+// }
+
+.membership__tabs > input[type="radio"] {
+  display: none;
+}
+
+.membership__tabs > input[type="radio"]:checked + label {
+  font-family: "RobotoCondensed-Regular", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 150%;
+  color: #102654;
+  cursor: default;
+}
+
+.membership__tabs > div { // стили самих вкладок активных
+  display: none;
+}
+
+#tab1:checked ~ #content-1,
+#tab2:checked ~ #content-2,
+#tab3:checked ~ #content-3 {
+  display: block;
+}
+
+.membership__tabs > label {
+  display: inline-block;
+  // text-align: center;
+  // vertical-align: middle;
+  user-select: none;
+  // padding: 2px 0;
+  transition: color 0.15s ease-in-out;
+  cursor: pointer;
+  font-family: "RobotoCondensed-Regular", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 150%;
+  color: rgba(16, 38, 84, 0.5);
+}
+
+.membership__tab-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.membership__item {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 31%;
+}
+
+.membership__header {
+  font-family: "RobotoCondensed-Regular", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 29px;
+  padding: 0;
+  margin: 0;
+}
+
+.membership__quantity {
+  font-family: "RobotoCondensed-Regular", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  padding: 0;
+  margin: 0;
+}
+
+.membership__price {
+  font-family: "RobotoCondensed-Regular", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 150%;
+  color: #103aae;
+  padding: 0;
+  margin: 0;
+}

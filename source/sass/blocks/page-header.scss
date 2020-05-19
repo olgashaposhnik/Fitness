@@ -13,7 +13,8 @@
   background-image: url("../img/trainer-main@1x.png");
   background-position: top 50px left calc(50% + 130px);
   background-repeat: no-repeat;
-  background-size: 500px, 556px;
+  // background-size: 500px, 556px;
+  background-size: 500px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/trainer-main@2x.png");
@@ -24,6 +25,11 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.page-header__logo svg {
+  width: 87px;
+  height: 20px;
 }
 
 .page-header__phone {
@@ -73,5 +79,59 @@
 
   &--instagram svg {
     padding-left: 4px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .page-header__wrapper {
+    background-image: url("../img/trainer-main-tablet@1x.png");
+    background-position: top 82px left calc(50% + 177px);
+    background-size: 324px;
+    padding-top: 40px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/trainer-main-tablet@2x.png");
+    }
+  }
+
+  .page-header__logo svg {
+    width: 82px;
+    height: 17px;
+  }
+
+  .page-header__phone {
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+  }
+
+  .page-header__social__list {
+    display: none;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .page-header__wrapper {
+    background-image: none;
+    padding-top: 20px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: none;
+    }
+  }
+
+  .page-header__logo svg {
+    width: 68px;
+    height: 15px;
+  }
+
+  .page-header__phone {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+  }
+
+  .page-header__social__list {
+    display: none;
   }
 }
