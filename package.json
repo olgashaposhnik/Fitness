@@ -1,7 +1,7 @@
 {
-  "name": "Fitness",
+  "name": "fitness",
   "version": "1.0.0",
-  "description": "Стартовый шаблон сборки Лиги А",
+  "description": "Проект Fitness",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.5.x",

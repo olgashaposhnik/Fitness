@@ -1,0 +1,77 @@
+.page-header {
+  background-color: #003d85;
+  background-image: url("../img/header-background.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
+}
+
+.page-header__wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  background-image: url("../img/trainer-main@1x.png");
+  background-position: top 50px left calc(50% + 130px);
+  background-repeat: no-repeat;
+  background-size: 500px, 556px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/trainer-main@2x.png");
+  }
+}
+
+.page-header__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.page-header__phone {
+  margin: 0;
+  font-family: "BebasNeue-Regular", "Arial", sans-serif;
+  font-size: 26px;
+  line-height: 26px;
+  letter-spacing: 0.03em;
+}
+
+.page-header__wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.page-header__social__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 85px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.page-header__social__item {
+  cursor: pointer;
+  text-align: right;
+
+  &--facebook {
+    padding-bottom: 15px;
+  }
+
+  &--vkontakte {
+    padding-bottom: 12px;
+  }
+
+  &--facebook svg {
+    padding-left: 3px;
+  }
+
+  &--vkontakte svg {
+    padding-left: 1px;
+  }
+
+  &--instagram svg {
+    padding-left: 4px;
+  }
+}

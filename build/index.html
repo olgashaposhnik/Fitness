@@ -7,52 +7,56 @@
   <title>"Supergym". Фитнес центр Омск. Тренажёрный зал. Групповые занятия. Кардио-зона</title>
   <meta name="format-detection" content="telephone=no">
   <meta name="Description" content="«Supergym». Фитнес центр Омск. Тренажёрный зал. Групповые занятия. Кардио-зона">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
-  <header class="page-header container">
-    <div class="page-header__container">
-      <a class="page-header__logo">
-        <svg height="20px" width="89px">
-          <use xlink:href="img/sprite.svg#logo"></use>
-        </svg>
-      </a>
-      <p class="page-header__phone"><a class="page-header__phone__link" href="tel:+88005555555">8-800-555-55-55</a></p>
+  <header class="page-header">
+    <div class="page-header__wrapper container">
+      <div class="page-header__container">
+        <a class="page-header__logo">
+          <svg height="20px" width="89px">
+            <use xlink:href="img/sprite.svg#logo"></use>
+          </svg>
+        </a>
+        <p class="page-header__phone"><a class="page-header__phone__link" href="tel:+88005555555">8-800-555-55-55</a></p>
+      </div>
+      <div class="page-header__wrap">
+        <section class="page-header__description header-description">
+          <p class="header-description__city">омск</p>
+          <ul class="header-description__list">
+            <li class="header-description__item">Тренажёрный зал</li>
+            <li class="header-description__item">Групповые занятия</li>
+            <li class="header-description__item">Кардио-зона</li>
+          </ul>
+          <h1 class="header-description__header">Фитнес центр</h1>
+          <a class="header-description__link">Купить абонемент</a>
+        </section>
+        <ul class="page-header__social__list">
+          <li class="page-header__social__item page-header__social__item--facebook">
+            <a class="page-header__social__link page-header__social__link--facebook" aria-label="facebook" href="#">
+              <svg height="13px" width="15px">
+                <use xlink:href="img/sprite.svg#fb"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="page-header__social__item page-header__social__item--vkontakte">
+            <a class="page-header__social__link page-header__social__link--vk" aria-label="vkontakte" href="#">
+              <svg height="14px" width="15px">
+                <use xlink:href="img/sprite.svg#vk"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="page-header__social__item page-header__social__item--instagram">
+            <a class="page-header__social__link page-header__social__link--ig" aria-label="instagram" href="#">
+              <svg height="11px" width="15px">
+                <use xlink:href="img/sprite.svg#ig"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
     </div>
-    <section class="page-header__description header-description">
-      <p class="header-description__city">омск</p>
-      <ul class="header-description__list">
-        <li class="header-description__item">Тренажёрный зал</li>
-        <li class="header-description__item">Групповые занятия</li>
-        <li class="header-description__item">Кардио-зона</li>
-      </ul>
-      <h1 class="header-description__header">Фитнес центр</h1>
-      <a class="header-description__link">Купить абонемент</a>
-    </section>
-    <ul class="page-header__social__list">
-      <li class="page-header__social__item">
-        <a class="page-header__social__link page-header__social__link--facebook" aria-label="facebook" href="#">
-          <svg height="13px" width="9px">
-            <use xlink:href="img/sprite.svg#fb"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="page-header__social__item">
-        <a class="page-header__social__link page-header__social__link--vk" aria-label="vkontakte" href="#">
-          <svg height="14px" width="9px">
-            <use xlink:href="img/sprite.svg#vk"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="page-header__social__item social__item">
-        <a class="page-header__social__link page-header__social__link--ig" aria-label="instagram" href="#">
-          <svg height="11px" width="9px">
-            <use xlink:href="img/sprite.svg#ig"></use>
-          </svg>
-        </a>
-      </li>
-    </ul>
+    </div>
   </header>
   <main class="page-main">
     <section class="description-block container">
@@ -179,8 +183,8 @@
       <button type="button" class="competitions__button">заполнить заявку</button>
     </section>
     <section class="trainers container">
-      <h2 class="competitions__header">Тренеры</h2>
-      <div class="competitions__slider slider">
+      <h2 class="trainers__header">Тренеры</h2>
+      <div class="trainers__slider slider">
         <div class="slider__wrapper">
           <div class="slider__item">
             <h3>Анна Павлова</h3>
@@ -235,7 +239,8 @@
             </picture>
           </div>
         </div>
-    </div></section>
+      </div>
+    </section>
     <section class="advantages">
       <div class="advantages__container container">
         <h2>Наши преимущества</h2>
@@ -255,7 +260,7 @@
           <li class="advantages__item">
             <p class="advantages__value">100</p>
             <p class="advantages__unit">тренажеров</p>
-            <h3 class="visually-hidden"></h3>
+            <h3 class="visually-hidden">Оборудование</h3>
             <p class="advantages__text">Современные тренажеры на все группы мышц</p>
           </li>
           <li class="advantages__item">
@@ -291,6 +296,7 @@
       </div>
     </section>
     <section class="reviews container">
+      <h2>Отзывы</h2>
       <div class="reviews__slider slider">
         <div class="slider__wrapper">
           <div class="slider__item">
@@ -306,8 +312,10 @@
             <p class="slider__text">«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
           </div>
         </div>
-    </div></section>
+      </div>
+    </section>
     <section class="wrapper">
+      <h2 class="visually-hidden">Занятия и контакты</h2>
       <section class="free-training">
         <div class="free-training__wrapper">
           <h3>БЕСПЛАТНОЕ занятие</h3>
