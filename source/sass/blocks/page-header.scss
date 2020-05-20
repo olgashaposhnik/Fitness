@@ -27,6 +27,16 @@
   justify-content: space-between;
 }
 
+.page-header__logo {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
 .page-header__logo svg {
   width: 87px;
   height: 20px;
@@ -38,6 +48,14 @@
   font-size: 26px;
   line-height: 26px;
   letter-spacing: 0.03em;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .page-header__wrap {
@@ -79,6 +97,14 @@
 
   &--instagram svg {
     padding-left: 4px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }
 
