@@ -93,12 +93,14 @@
       <div class="membership__container container">
         <h2>Абонементы</h2>
         <div class="membership__tabs">
-          <input type="radio" id="tab1" name="tab-group" checked>
-          <label for="tab1" class="membership__tab-title">1 месяц</label>
-          <input type="radio" id="tab2" name="tab-group">
-          <label for="tab2" class="membership__tab-title">6 месяцев</label>
-          <input type="radio" id="tab3" name="tab-group" checked>
-          <label for="tab3" class="membership__tab-title">12 месяцев</label>
+          <div class="membership__controls">
+            <input type="radio" id="tab1" name="tab-group" checked>
+            <label for="tab1" class="membership__tab-title">1 месяц</label>
+            <input type="radio" id="tab2" name="tab-group">
+            <label for="tab2" class="membership__tab-title">6 месяцев</label>
+            <input type="radio" id="tab3" name="tab-group">
+            <label for="tab3" class="membership__tab-title">12 месяцев</label>
+          </div>
           <!-- <div class="membership__tab"> -->
           <!-- <input type="radio" id="tab1" name="tab-group" checked>
            <label for="tab1" class="membership__tab-title">1 месяц</label> -->
@@ -107,19 +109,19 @@
               <li class="membership__item">
                 <h3 class="membership__header">С тренером</h3>
                 <p class="membership__quantity">12 занятий</p>
-                <p class="membership__price">5000</p>
+                <p class="membership__price">5000<span>5000</span></p>
                 <button type="button" class="membership__button">купить абонемент</button>
               </li>
               <li class="membership__item">
                 <h3 class="membership__header">Дневной</h3>
                 <p class="membership__quantity">с 8:00 до 17:00</p>
-                <p class="membership__price">1700</p>
+                <p class="membership__price">1700<span>1700</span></p>
                 <button type="button" class="membership__button">купить абонемент</button>
               </li>
               <li class="membership__item">
                 <h3 class="membership__header">Полный день</h3>
                 <p class="membership__quantity">с 8:00 до 22:00</p>
-                <p class="membership__price">2700</p>
+                <p class="membership__price">2700<span>2700</span></p>
                 <button type="button" class="membership__button">купить абонемент</button>
               </li>
             </ul>
@@ -133,19 +135,19 @@
               <li class="membership__item">
                 <h3 class="membership__header">С тренером</h3>
                 <p class="membership__quantity">12 занятий</p>
-                <p class="membership__price">25000</p>
+                <p class="membership__price">25000<span>25000</span></p>
                 <button type="button" class="membership__button">купить абонемент</button>
               </li>
               <li class="membership__item">
                 <h3 class="membership__header">Дневной</h3>
                 <p class="membership__quantity">с 8:00 до 17:00</p>
-                <p class="membership__price">9600</p>
+                <p class="membership__price">9600<span>9600</span></p>
                 <button type="button" class="membership__button">купить абонемент</button>
               </li>
               <li class="membership__item">
                 <h3 class="membership__header">Полный день</h3>
                 <p class="membership__quantity">с 8:00 до 22:00</p>
-                <p class="membership__price">15600</p>
+                <p class="membership__price">15600<span>15600</span></p>
                 <button type="button" class="membership__button">купить абонемент</button>
               </li>
             </ul>
@@ -159,19 +161,19 @@
               <li class="membership__item">
                 <h3 class="membership__header">С тренером</h3>
                 <p class="membership__quantity">12 занятий</p>
-                <p class="membership__price">48000</p>
+                <p class="membership__price">48000<span>48000</span></p>
                 <button type="button" class="membership__button">купить абонемент</button>
               </li>
               <li class="membership__item">
                 <h3 class="membership__header">Дневной</h3>
                 <p class="membership__quantity">с 8:00 до 17:00</p>
-                <p class="membership__price">18000</p>
+                <p class="membership__price">18000<span>18000</span></p>
                 <button type="button" class="membership__button">купить абонемент</button>
               </li>
               <li class="membership__item">
                 <h3 class="membership__header">Полный день</h3>
                 <p class="membership__quantity">с 8:00 до 22:00</p>
-                <p class="membership__price">30000</p>
+                <p class="membership__price">30000<span>30000</span></p>
                 <button type="button" class="membership__button">купить абонемент</button>
               </li>
             </ul>
@@ -189,9 +191,9 @@
           <p class="competitions__text">Время</p>
           <p class="competitions__value">12:00</p>
         </div>
+        <p class="competitions__text">Ежегодные соревнования по CrossFit</p>
+        <button type="button" class="competitions__button">заполнить заявку</button>
       </div>
-      <p class="competitions__text">Ежегодные соревнования по CrossFit</p>
-      <button type="button" class="competitions__button">заполнить заявку</button>
     </section>
     <section class="trainers container">
       <h2 class="trainers__header">Тренеры</h2>

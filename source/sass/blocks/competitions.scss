@@ -1,0 +1,94 @@
+.competitions {
+  color: #ffffff;
+  background-image: url("../img/competitions@1x.png");
+  background-position: top 50px left calc(50% + 130px);
+  background-repeat: no-repeat;
+  background-size: 660px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/competitions@2x.png");
+  }
+}
+
+.competitions__wrapper {
+  background: #ed0233;
+  width: 500px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-right: 86px; // перевести в %
+  padding-left: 71px; // перевести в %
+  padding-top: 80px;
+}
+
+.competitions__header {
+  font-family: "BebasNeue-Bold", "Arial", sans-serif;
+  font-size: 90px;
+  line-height: 90px;
+  letter-spacing: 0.03em;
+  padding: 0;
+  margin: 0;
+  width: 201px;
+}
+
+.competitions__wrap {
+  display: flex;
+  flex-direction: column;
+  width: 92px;
+}
+
+.competitions__text {
+  font-family: "RobotoCondensed-Regular", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 150%;
+  padding: 0;
+  margin: 0;
+}
+
+.competitions__value {
+  font-family: "RobotoCondensed-Regular", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 150%;
+  padding: 0;
+  margin: 0;
+}
+
+.competitions__value span {
+  font-family: "RobotoCondensed-Regular", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 150%;
+  padding: 0;
+  margin: 0;
+}
+
+.competitions__button {
+  font-family: "RobotoCondensed-Regular", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 68px;
+  background-color: transparent;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  border: 4px solid #FFFFFF;
+  padding-top: 24px;
+  padding-bottom: 23px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+}

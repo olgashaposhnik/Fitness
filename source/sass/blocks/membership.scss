@@ -9,25 +9,51 @@
 }
 
 .membership h2 {
-  font-family: "BebasNeue-Regular", "Arial", sans-serif;
+  font-family: "BebasNeue-Bold", "Arial", sans-serif;
   font-size: 49px;
   line-height: 49px;
   letter-spacing: 0.03em;
   padding: 0;
   margin: 0;
-  padding-top: 110px;
+  padding-top: 115px;
   text-align: center;
-  padding-bottom: 50px;
+  padding-bottom: 37px;
 }
 
-// .membership__tabs {
-// }
+.membership__tabs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
 
-.membership__tabs > input[type="radio"] {
+.membership__controls {
+  width: 341px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid rgba(120, 120, 120, 0.2);
+  margin-bottom: 39px;
+}
+
+.membership__tab-title {
+  padding-bottom: 11px;
+}
+
+.membership__tab-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+// .membership__tabs > input[type="radio"] {
+.membership__controls > input[type="radio"] {
   display: none;
 }
 
-.membership__tabs > input[type="radio"]:checked + label {
+// .membership__tabs > input[type="radio"]:checked + label {
+.membership__controls > input[type="radio"]:checked + label {
   font-family: "RobotoCondensed-Regular", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -37,7 +63,8 @@
   cursor: default;
 }
 
-.membership__tabs > div { // стили самих вкладок активных
+// .membership__tabs > div { // стили самих вкладок активных
+.membership__controls > div { // стили самих вкладок активных
   display: none;
 }
 
@@ -47,7 +74,14 @@
   display: block;
 }
 
-.membership__tabs > label {
+// .membership__controls ~ #tab1:checked ~ #content-1,
+// #tab2:checked ~ #content-2,
+// #tab3:checked ~ #content-3 {
+//   display: block;
+// }
+
+// .membership__tabs > label {
+.membership__controls > label {
   display: inline-block;
   // text-align: center;
   // vertical-align: middle;
@@ -64,11 +98,13 @@
 }
 
 .membership__tab-list {
+  width: 100%;
   list-style: none;
   display: flex;
   justify-content: space-between;
   margin: 0;
   padding: 0;
+  padding-bottom: 120px;
 }
 
 .membership__item {
@@ -76,7 +112,31 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 31%;
+
+  &:hover {
+    background-image: url("../img/membership__item-bg@1x.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.membership__item:hover .membership__button {
+  background-image: url("../img/membership-button-hover.svg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-left: 0;
+  padding-right: 0;
+  border: 2px solid transparent;
+  color: #ffffff;
+  min-width: 210px;
 }
 
 .membership__header {
@@ -87,6 +147,8 @@
   line-height: 29px;
   padding: 0;
   margin: 0;
+  padding-top: 63px;
+  padding-bottom: 11px;
 }
 
 .membership__quantity {
@@ -97,10 +159,11 @@
   line-height: 150%;
   padding: 0;
   margin: 0;
+  padding-bottom: 63px;
 }
 
 .membership__price {
-  font-family: "RobotoCondensed-Regular", "Arial", sans-serif;
+  font-family: "RobotoCondensed-Bold", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 60px;
@@ -108,4 +171,61 @@
   color: #103aae;
   padding: 0;
   margin: 0;
+  padding-bottom: 35px;
+  position: relative;
+  z-index: 1;
+  padding-right: 45px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/ruble.svg");
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 42px;
+    top: 25px;
+    right: 0;
+  }
+}
+
+.membership__price > span {
+  position: absolute;
+  // filter: blur(10px);
+  top: -55px;
+  // left: calc(50% - 101.5px);
+  left: -12%;
+  font-family: "RobotoCondensed-Bold", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 100px;
+  line-height: 150%;
+  color: rgba(232, 232, 232, 0.48);
+  opacity: 0.48;
+  z-index: -1;
+}
+
+.membership__button {
+  font-family: "RobotoCondensed-Regular", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 68px;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid #102654;
+  padding-top: 24px;
+  padding-bottom: 23px;
+  padding-left: 10px;
+  padding-right: 10px;
+  min-width: 206px;
+  max-width: 300px;
 }
