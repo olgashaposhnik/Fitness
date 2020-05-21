@@ -4,6 +4,8 @@
   background-position: top 50px left calc(50% + 130px);
   background-repeat: no-repeat;
   background-size: 660px;
+  position: relative;
+  z-index: 1;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/competitions@2x.png");
@@ -85,7 +87,7 @@
   display: inline-block;
   text-align: center;
   text-decoration: none;
-  border: 4px solid #FFFFFF;
+  border: 4px solid #ffffff;
   padding-top: 24px;
   padding-bottom: 23px;
   padding-left: 10px;
