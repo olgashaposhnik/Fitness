@@ -191,12 +191,20 @@
         <div class="competitions__wrap">
           <p class="competitions__text">Дата</p>
           <p class="competitions__value">7<span>Марта 2019</span></p>
-          <p class="competitions__text">Время</p>
+          <p class="competitions__text competitions__text--time">Время</p>
           <p class="competitions__value">12:00</p>
         </div>
-        <p class="competitions__text">Ежегодные соревнования по CrossFit</p>
+        <p class="competitions__text competitions__text--advert">Ежегодные соревнования по CrossFit</p>
         <button type="button" class="competitions__button">заполнить заявку</button>
       </div>
+      <picture>
+        <source media="(max-width: 767px)" srcset="img/competitions-mobile@1x.webp 1x, /img/competitions-mobile@2x.webp 2x" type="image/webp">
+        <source media="(max-width: 1199px)" srcset="img/competitions-tablet@1x.webp 1x, /img/competitions-tablet@2x.webp 2x" type="image/webp">
+        <source srcset="img/competitions@1x.webp 1x, /img/competitions@2x.webp 2x" type="image/webp">
+        <source media="(max-width: 767px)" srcset="img/competitions-mobile@1x.png 1x, /img/competitions-mobile@2x.png 2x">
+        <source media="(max-width: 1199px)" srcset="img/competitions-tablet@1x.png 1x, /img/competitions-tablet@2x.png 2x">
+        <img class="competitions__image" src="img/competitions@1x.png" srcset="/img/competitions@2x.png 2x" height="500" width="660" alt="Ежегодные соревнования по CrossFit">
+      </picture>
     </section>
     <section class="trainers container">
       <h2 class="trainers__header">Тренеры</h2>
