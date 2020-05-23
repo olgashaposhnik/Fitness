@@ -1,5 +1,6 @@
 .trainers {
   padding-top: 58px;
+  padding-bottom: 119px;
 }
 
 .trainers h2 {
@@ -10,4 +11,127 @@
   color: #102654;
   margin: 0;
   padding: 0;
+}
+
+.trainers__item {
+  position: relative;
+  min-height: 294px;
+  width: 260px;
+  padding-right: 40px;
+  // box-sizing: content-box;
+
+  // &:nth-child(4n) {
+  //   padding-right: 0px;
+  // }
+
+  &:hover {
+    background: rgba(16, 38, 84, 0.89);
+  }
+}
+
+.trainers__item:hover h3 {
+  padding-top: 52px;
+  margin-bottom: -4px;
+}
+
+.trainers__item:hover .trainers__text {
+  padding-bottom: 32px;
+}
+
+.trainers__item:hover .trainers__text,
+.trainers__item:hover .trainers__experience__list {
+  display: block;
+  flex-direction: column;
+}
+
+.trainers h3 {
+  font-family: "RobotoCondensed-Bold", "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 150%;
+  text-align: center;
+  color: #ffffff;
+  padding-top: 246px;
+}
+
+.trainers__list {
+  // width: 1200px; // придумать другое решение
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  padding-top: 52px;
+  display: flex;
+  justify-content: space-between;
+  // background-color: #102654;
+}
+
+.trainers__text {
+  font-family: "RobotoCondensed-Regular", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: #b6bdcc;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  display: none;
+}
+
+.trainers__experience__list {
+  list-style: none;
+  font-family: "RobotoCondensed-Regular", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 150%;
+  color: #ffffff;
+  padding: 0;
+  margin: 0;
+  display: none;
+  padding-left: 71px;
+}
+
+.trainers__experience__item {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  padding-bottom: 14px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/trainers-list.svg");
+    background-repeat: no-repeat;
+    width: 6px;
+    height: 6px;
+    top: 6px;
+    left: -15px;
+  }
+}
+
+.trainers__image {
+  position: absolute;
+  width: 260px;
+  height: 294px;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+@media (max-width: $tablet-width) {
+  .trainers {
+    padding-top: 58px;
+    padding-bottom: 77px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .trainers {
+    padding-top: 58px;
+    padding-bottom: 0;
+  }
 }
