@@ -145,6 +145,10 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/membership__item-bg@2x.png");
+    }
   }
 
   &:active {
