@@ -4,11 +4,12 @@
   color: #ffffff;
   background: #102654;
   align-items: flex-end;
+  padding-left: 45px;
 }
 
 .free-training__wrapper {
-  width: 580px;
-  // min-height: 337px;
+  max-width: 580px;
+  width: 91%;
 }
 
 .free-training h3 {
