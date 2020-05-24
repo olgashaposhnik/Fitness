@@ -170,6 +170,11 @@
 }
 
 @media (max-width: $tablet-width) {
+  .stock__wrap {
+    max-width: 786px;
+    margin: 0 auto;
+  }
+
   .stock h2 {
     font-size: 42px;
     line-height: 42px;

@@ -1,6 +1,6 @@
 'use strict';
 
-// Реализация слайдера
+// Реализация слайдера в блоке "отзывы"
 var multiItemSlider = (function () {
   return function (selector) {
     var mainElement = document.querySelector(selector); // основный элемент блока
@@ -13,7 +13,7 @@ var multiItemSlider = (function () {
     var itemWidth = parseFloat(getComputedStyle(sliderItems[0]).width); // ширина одного элемента
     var positionLeftItem = 0; // позиция левого активного элемента
     var transform = 0; // значение транфсофрмации .sliderwrapper
-    var step = itemWidth * 4 / wrapperWidth * 100; // величина шага (для трансформации)
+    var step = itemWidth / wrapperWidth * 100; // величина шага (для трансформации)
     var items = []; // массив элементов
     // наполнение массива items
     sliderItems.forEach(function (item, index) {

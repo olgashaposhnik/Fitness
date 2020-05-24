@@ -1,0 +1,146 @@
+.reviews {
+  width: 100%;
+  padding-bottom: 120px;
+}
+
+.reviews h2 {
+  font-family: "BebasNeue-Bold", "Arial", sans-serif;
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  color: #102654;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  padding-top: 69px;
+  padding-bottom: 52px;
+}
+
+.reviews__slider {
+  color: #ffffff;
+  margin: 0 auto;
+  width: 560px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.reviews__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 560px;
+  background: #1c3374;
+  box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
+  padding-left: 64px;
+  padding-right: 65px;
+  padding-top: 54px;
+  padding-bottom: 43px;
+}
+
+.reviews__image {
+  width: 80px;
+  height: 80px;
+  margin-top: 7px;
+}
+
+.reviews__item__wrap {
+  display: flex;
+  flex-direction: column;
+  width: 328px;
+}
+
+.reviews h3 {
+  font-family: "RobotoCondensed-Bold", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 150%;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 13px;
+}
+
+.reviews p {
+  font-family: "RobotoCondensed-Regular", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 140%;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 12px;
+}
+
+@media (max-width: $tablet-width) {
+  .reviews {
+    padding-bottom: 100px;
+  }
+
+  .reviews h2 {
+    font-size: 42px;
+    line-height: 42px;
+    padding-top: 48px;
+    padding-bottom: 41px;
+  }
+
+  .reviews__slider {
+    width: 566px;
+  }
+
+  .reviews p {
+    padding-bottom: 14px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .reviews {
+    padding-bottom: 70px;
+  }
+
+  .reviews h2 {
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: 0.03em;
+    padding-top: 24px;
+    padding-bottom: 42px;
+  }
+
+  .reviews__slider {
+    // width: 226px;
+    width: 77.9%;
+    max-width: 290px;
+  }
+
+  .reviews__item {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 40px;
+    padding-bottom: 23px;
+    position: relative;
+  }
+
+  .reviews__image {
+    width: 68px;
+    height: 68px;
+    margin-top: 0;
+    margin-left: 16px;
+    float: right;
+  }
+
+  .reviews h3 {
+    position: absolute;
+    width: 80px;
+    top: 48px;
+    right: 22px;
+    line-height: 130%;
+  }
+
+  .reviews p {
+    padding-bottom: 12px;
+    padding-top: 16px;
+    text-align: center;
+  }
+}
