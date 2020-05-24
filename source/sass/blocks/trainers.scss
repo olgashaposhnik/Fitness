@@ -1,7 +1,8 @@
 .trainers {
   padding-top: 58px;
   padding-bottom: 119px;
-  height: 572px;  // УДАЛИТЬ!!!!!!!!!!!!
+  position: relative;
+  // height: 572px;  // УДАЛИТЬ!!!!!!!!!!!!
 }
 
 .trainers h2 {
@@ -14,33 +15,54 @@
   padding: 0;
 }
 
+// .trainers__slider {
+//   // width: 92.8%;
+//   // padding-left: 45px;
+//   // padding-right: 45px;
+// }
+
 .trainers__item {
   position: relative;
   min-height: 294px;
   width: 260px;
-  padding-right: 40px;
+  // margin-right: 10px;
+  margin-right: 0.863%;
   // box-sizing: content-box;
 
   // &:nth-child(4n) {
   //   padding-right: 0px;
   // }
 
+  // &:hover {
+  //   background: rgba(16, 38, 84, 0.89);
+  // }
+}
+
+.trainers__wrap {
+  width: 260px;
+  margin-right: 40px;
+  min-height: 294px;
+
   &:hover {
     background: rgba(16, 38, 84, 0.89);
   }
 }
 
-.trainers__item:hover h3 {
+.trainers__item:nth-child(4n) .trainers__wrap {
+  margin-right: 0;
+}
+
+.trainers__wrap:hover h3 {
   padding-top: 52px;
   margin-bottom: -4px;
 }
 
-.trainers__item:hover .trainers__text {
+.trainers__wrap:hover .trainers__text {
   padding-bottom: 32px;
 }
 
-.trainers__item:hover .trainers__text,
-.trainers__item:hover .trainers__experience__list {
+.trainers__wrap:hover .trainers__text,
+.trainers__wrap:hover .trainers__experience__list {
   display: block;
   flex-direction: column;
 }
@@ -59,7 +81,8 @@
 }
 
 .trainers__list {
-  // width: 1200px; // придумать другое решение
+  // width: 1160px; // придумать другое решение
+  width: 100%;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -94,6 +117,7 @@
   margin: 0;
   display: none;
   padding-left: 71px;
+  padding-right: 15px;
 }
 
 .trainers__experience__item {
