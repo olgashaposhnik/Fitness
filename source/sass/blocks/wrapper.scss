@@ -1,0 +1,33 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.wrapper__section {
+  width: 50%;
+}
+
+@media (max-width: $tablet-width) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .wrapper__section {
+    width: 100%;
+  }
+}
+
+// @media (max-width: $mobile-width) {
+//   .wrapper {
+//     display: flex;
+//     flex-direction: row;
+//     width: 100%;
+//   }
+
+//   .wrapper__section {
+//     width: 50%;
+//   }
+// }

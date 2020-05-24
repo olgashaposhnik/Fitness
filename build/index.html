@@ -434,19 +434,19 @@
     </section>
     <section class="wrapper">
       <h2 class="visually-hidden">Занятия и контакты</h2>
-      <section class="free-training">
+      <section class="wrapper__section free-training">
         <div class="free-training__wrapper">
           <h3>БЕСПЛАТНОЕ занятие</h3>
           <form action="#" class="free-training__form form" method="post">
-            <label class="form__label" for="name">Имя</label>
-            <input class="form__input" id="name" name="name" placeholder="Имя" type="text" required="">
-            <label class="form__label" for="phone">Телефон</label>
-            <input class="form__input" id="phone" name="phone" placeholder="Телефон" type="text" required="">
+            <label class="form__label visually-hidden" for="name"></label>
+            <input aria-label="Введите Ваше имя" required="" class="form__input" id="name" name="name" placeholder="Имя" type="text">
+            <label class="form__label visually-hidden" for="phone"></label>
+            <input aria-label="Введите Ваш телефон" required="" type="tel" class="form__input" id="phone" name="phone" placeholder="Телефон">
             <button class="form__button" type="submit">Отправить</button>
           </form>
         </div>
       </section>
-      <section class="contacts">
+      <section class="wrapper__section contacts">
         <div class="contacts__wrapper">
           <h3>Контакты</h3>
           <ul class="contacts__list">
