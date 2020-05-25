@@ -8,6 +8,7 @@
   <title>"Supergym". Фитнес центр Омск. Тренажёрный зал. Групповые занятия. Кардио-зона</title>
   <meta name="format-detection" content="telephone=no">
   <meta name="Description" content="«Supergym». Фитнес центр Омск. Тренажёрный зал. Групповые занятия. Кардио-зона">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -20,7 +21,7 @@
             <use xlink:href="img/sprite.svg#logo"></use>
           </svg>
         </a>
-        <p class="page-header__phone"><a class="page-header__phone__link" href="tel:+88005555555">8-800-555-55-55</a></p>
+        <p class="page-header__phone"><a class="page-header__phone__link" href="tel:88005555555">8-800-555-55-55</a></p>
       </div>
       <div class="page-header__wrap">
         <section class="page-header__description header-description">
@@ -85,7 +86,7 @@
             <source media="(max-width: 1199px)" srcset="img/gym-video-tablet@1x.png 1x, /img/gym-video-tablet@2x.png 2x">
             <img class="description-block__video-image" src="img/gym-video@1x.png" srcset="/img/gym-video@2x.png 2x" height="228" width="364" alt="Видео фитнес-центра «Supergym»">
           </picture>
-          <button type="button" class="description-block__video-button video__button"></button>
+          <button aria-label="Посмотреть видео о нас" type="button" class="description-block__video-button video__button"></button>
         </div>
       </div>
     </section>
@@ -107,19 +108,19 @@
                 <h3 class="membership__header">С тренером</h3>
                 <p class="membership__quantity">12 занятий</p>
                 <p class="membership__price">5000<span>5000</span></p>
-                <button type="button" class="membership__button">купить абонемент</button>
+                <a class="membership__button">купить абонемент</a>
               </li>
               <li class="membership__item">
                 <h3 class="membership__header">Дневной</h3>
                 <p class="membership__quantity">с 8:00 до 17:00</p>
                 <p class="membership__price">1700<span>1700</span></p>
-                <button type="button" class="membership__button">купить абонемент</button>
+                <a class="membership__button">купить абонемент</a>
               </li>
               <li class="membership__item">
                 <h3 class="membership__header">Полный день</h3>
                 <p class="membership__quantity">с 8:00 до 22:00</p>
                 <p class="membership__price">2700<span>2700</span></p>
-                <button type="button" class="membership__button">купить абонемент</button>
+                <a class="membership__button">купить абонемент</a>
               </li>
             </ul>
           </div>
@@ -129,19 +130,19 @@
                 <h3 class="membership__header">С тренером</h3>
                 <p class="membership__quantity">12 занятий</p>
                 <p class="membership__price">25000<span>25000</span></p>
-                <button type="button" class="membership__button">купить абонемент</button>
+                <a class="membership__button">купить абонемент</a>
               </li>
               <li class="membership__item">
                 <h3 class="membership__header">Дневной</h3>
                 <p class="membership__quantity">с 8:00 до 17:00</p>
                 <p class="membership__price">9600<span>9600</span></p>
-                <button type="button" class="membership__button">купить абонемент</button>
+                <a class="membership__button">купить абонемент</a>
               </li>
               <li class="membership__item">
                 <h3 class="membership__header">Полный день</h3>
                 <p class="membership__quantity">с 8:00 до 22:00</p>
                 <p class="membership__price">15600<span>15600</span></p>
-                <button type="button" class="membership__button">купить абонемент</button>
+                <a class="membership__button">купить абонемент</a>
               </li>
             </ul>
           </div>
@@ -151,19 +152,19 @@
                 <h3 class="membership__header">С тренером</h3>
                 <p class="membership__quantity">12 занятий</p>
                 <p class="membership__price">48000<span>48000</span></p>
-                <button type="button" class="membership__button">купить абонемент</button>
+                <a class="membership__button">купить абонемент</a>
               </li>
               <li class="membership__item">
                 <h3 class="membership__header">Дневной</h3>
                 <p class="membership__quantity">с 8:00 до 17:00</p>
                 <p class="membership__price">18000<span>18000</span></p>
-                <button type="button" class="membership__button">купить абонемент</button>
+                <a class="membership__button">купить абонемент</a>
               </li>
               <li class="membership__item">
                 <h3 class="membership__header">Полный день</h3>
                 <p class="membership__quantity">с 8:00 до 22:00</p>
                 <p class="membership__price">30000<span>30000</span></p>
-                <button type="button" class="membership__button">купить абонемент</button>
+                <a class="membership__button">купить абонемент</a>
               </li>
             </ul>
           </div>
@@ -180,7 +181,7 @@
           <p class="competitions__value">12:00</p>
         </div>
         <p class="competitions__text competitions__text--advert">Ежегодные соревнования по CrossFit</p>
-        <button type="button" class="competitions__button">заполнить заявку</button>
+        <a class="competitions__button">заполнить заявку</a>
       </div>
       <picture>
         <source media="(max-width: 767px)" srcset="img/competitions-mobile@1x.webp 1x, /img/competitions-mobile@2x.webp 2x" type="image/webp">
@@ -193,11 +194,11 @@
     </section>
     <section class="trainers container">
       <h2>Тренеры</h2>
-      <div class="trainers__slider slider">
+      <div class="trainers__slider slider swiper-container-trainers">
       <!-- <div class="trainers__slider"> -->
-        <ul class="trainers__list slider__wrapper">
+        <ul class="trainers__list slider__wrapper swiper-wrapper-trainers">
         <!-- <ul class="trainers__list"> -->
-          <li class="trainers__item slider__item slider__item--trainer">
+          <li class="trainers__item slider__item slider__item--trainer swiper-slide">
           <!-- <li class="trainers__item"> -->
             <div class="trainers__wrap">
               <h3>Анна Павлова</h3>
@@ -213,7 +214,7 @@
               </picture>
             </div>
           </li>
-          <li class="trainers__item slider__item slider__item--trainer">
+          <li class="trainers__item slider__item slider__item--trainer swiper-slide">
           <!-- <li class="trainers__item"> -->
             <div class="trainers__wrap">
               <h3>Алексей Лавров</h3>
@@ -229,7 +230,7 @@
               </picture>
             </div>
           </li>
-          <li class="trainers__item slider__item slider__item--trainer">
+          <li class="trainers__item slider__item slider__item--trainer swiper-slide">
           <!-- <li class="trainers__item"> -->
             <div class="trainers__wrap">
               <h3>Александр Пашков</h3>
@@ -245,7 +246,7 @@
               </picture>
             </div>
           </li>
-          <li class="trainers__item slider__item slider__item--trainer">
+          <li class="trainers__item slider__item slider__item--trainer swiper-slide">
           <!-- <li class="trainers__item"> -->
             <div class="trainers__wrap">
               <h3>Мария Кетова</h3>
@@ -261,7 +262,7 @@
               </picture>
             </div>
           </li>
-          <li class="trainers__item slider__item slider__item--trainer">
+          <li class="trainers__item slider__item slider__item--trainer swiper-slide">
           <!-- <li class="trainers__item"> -->
             <div class="trainers__wrap">
               <h3>Анна Павлова</h3>
@@ -277,7 +278,7 @@
               </picture>
             </div>
           </li>
-          <li class="trainers__item slider__item slider__item--trainer">
+          <li class="trainers__item slider__item slider__item--trainer swiper-slide">
           <!-- <li class="trainers__item"> -->
             <div class="trainers__wrap">
               <h3>Алексей Лавров</h3>
@@ -293,7 +294,7 @@
               </picture>
             </div>
           </li>
-          <li class="trainers__item slider__item slider__item--trainer">
+          <li class="trainers__item slider__item slider__item--trainer swiper-slide">
           <!-- <li class="trainers__item"> -->
             <div class="trainers__wrap">
               <h3>Александр Пашков</h3>
@@ -309,7 +310,7 @@
               </picture>
             </div>
           </li>
-          <li class="trainers__item slider__item slider__item--trainer">
+          <li class="trainers__item slider__item slider__item--trainer swiper-slide">
           <!-- <li class="trainers__item"> -->
             <div class="trainers__wrap">
               <h3>Мария Кетова</h3>
@@ -329,8 +330,8 @@
         <!-- <a class="slider__control slider__control--left slider__control--left__trainers" href="#" role="button"></a>
         <a class="slider__control slider__control--right slider__control--right__trainers" href="#" role="button"></a> -->
       </div>
-      <a class="trainers__slider__control trainers__slider__control--left slider__control slider__control--left slider__control--left__trainers" href="#" role="button"></a>
-      <a class="trainers__slider__control trainers__slider__control--right slider__control slider__control--right slider__control--right__trainers" href="#" role="button"></a>
+      <button type="button" class="trainers__slider__control trainers__slider__control--left slider__control slider__control--left slider__control--left__trainers"></button>
+      <button type="button" class="trainers__slider__control trainers__slider__control--right slider__control slider__control--right slider__control--right__trainers"></button>
     </section>
     <section class="advantages">
       <div class="advantages__container container">
@@ -416,42 +417,44 @@
     </section>
     <section class="reviews container">
       <h2>Отзывы</h2>
-      <div class="reviews__slider slider">
-        <div class="reviews__item slider__item">
-          <picture>
-            <source srcset="img/reviews@1x.webp 1x, /img/reviews@2x.webp 2x" type="image/webp">
-            <img class="reviews__image" src="img/reviews@1x.png" srcset="/img/reviews@2x.png 2x" height="80" width="80" alt="Аватар пользователя">
-          </picture>
-          <div class="reviews__item__wrap">
-            <h3>Анна Орлова</h3>
-            <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+      <div class="reviews__slider slider swiper-container">
+        <div class="swiper-wrapper">
+          <div class="reviews__item slider__item swiper-slide">
+            <picture>
+              <source srcset="img/reviews@1x.webp 1x, /img/reviews@2x.webp 2x" type="image/webp">
+              <img class="reviews__image" src="img/reviews@1x.png" srcset="/img/reviews@2x.png 2x" height="80" width="80" alt="Аватар пользователя">
+            </picture>
+            <div class="reviews__item__wrap">
+              <h3>Анна Орлова</h3>
+              <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+            </div>
           </div>
-        </div>
-        <div class="reviews__item slider__item">
-          <picture>
-            <source srcset="img/reviews@1x.webp 1x, /img/reviews@2x.webp 2x" type="image/webp">
-            <img class="reviews__image" src="img/reviews@1x.png" srcset="/img/reviews@2x.png 2x" height="80" width="80" alt="Аватар пользователя">
-          </picture>
-          <div class="reviews__item__wrap">
-            <h3>Анна Орлова</h3>
-            <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+          <div class="reviews__item slider__item swiper-slide">
+            <picture>
+              <source srcset="img/reviews@1x.webp 1x, /img/reviews@2x.webp 2x" type="image/webp">
+              <img class="reviews__image" src="img/reviews@1x.png" srcset="/img/reviews@2x.png 2x" height="80" width="80" alt="Аватар пользователя">
+            </picture>
+            <div class="reviews__item__wrap">
+              <h3>Анна Орлова</h3>
+              <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+            </div>
           </div>
-        </div>
-        <div class="reviews__item slider__item">
-          <picture>
-            <source srcset="img/reviews@1x.webp 1x, /img/reviews@2x.webp 2x" type="image/webp">
-            <img class="reviews__image" src="img/reviews@1x.png" srcset="/img/reviews@2x.png 2x" height="80" width="80" alt="Аватар пользователя">
-          </picture>
-          <div class="reviews__item__wrap">
-            <h3>Анна Орлова</h3>
-            <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+          <div class="reviews__item slider__item swiper-slide">
+            <picture>
+              <source srcset="img/reviews@1x.webp 1x, /img/reviews@2x.webp 2x" type="image/webp">
+              <img class="reviews__image" src="img/reviews@1x.png" srcset="/img/reviews@2x.png 2x" height="80" width="80" alt="Аватар пользователя">
+            </picture>
+            <div class="reviews__item__wrap">
+              <h3>Анна Орлова</h3>
+              <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+            </div>
           </div>
+          <!-- <a class="slider__control slider__control--left" href="#" role="button"></a>
+          <a class="slider__control slider__control--right" href="#" role="button"></a> -->
         </div>
-        <!-- <a class="slider__control slider__control--left" href="#" role="button"></a>
-        <a class="slider__control slider__control--right" href="#" role="button"></a> -->
       </div>
-      <a class="reviews__slider__control reviews__slider__control--left slider__control slider__control--left" href="#" role="button"></a>
-      <a class="reviews__slider__control reviews__slider__control--right slider__control slider__control--right" href="#" role="button"></a>
+      <button type="button" class="swiper-button-prev reviews__slider__control reviews__slider__control--left slider__control slider__control--left"></button>
+      <button type="button" class="swiper-button-next reviews__slider__control reviews__slider__control--right slider__control slider__control--right"></button>
     </section>
     <section class="wrapper">
       <h2 class="visually-hidden">Занятия и контакты</h2>
@@ -484,7 +487,7 @@
             <li class="contacts__items contacts__items--right">
               <div class="contacts__item">
                 <h4 class="contacts__header">Телефон:</h4>
-                <p><a class="contacts__link" href="tel:+88005555555"></a>8-800-555-55-55</p>
+                <p><a class="contacts__link" href="tel:88005555555"></a>8-800-555-55-55</p>
               </div>
               <div class="contacts__item">
                 <h4 class="contacts__header">Email:</h4>
@@ -554,6 +557,7 @@
       </div>
     </div>
   </footer>
+  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
   <script src="js/main.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/svgxuse/1.2.6/svgxuse.min.js" async></script>
 </body>

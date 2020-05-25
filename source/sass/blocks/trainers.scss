@@ -2,7 +2,6 @@
   padding-top: 58px;
   padding-bottom: 119px;
   position: relative;
-  // height: 572px;  // УДАЛИТЬ!!!!!!!!!!!!
 }
 
 .trainers h2 {
@@ -25,17 +24,6 @@
   position: relative;
   min-height: 294px;
   width: 260px;
-  // margin-right: 10px;
-  margin-right: 0.863%;
-  // box-sizing: content-box;
-
-  // &:nth-child(4n) {
-  //   padding-right: 0px;
-  // }
-
-  // &:hover {
-  //   background: rgba(16, 38, 84, 0.89);
-  // }
 }
 
 .trainers__wrap {
@@ -46,10 +34,6 @@
   &:hover {
     background: rgba(16, 38, 84, 0.89);
   }
-}
-
-.trainers__item:nth-child(4n) .trainers__wrap {
-  margin-right: 0;
 }
 
 .trainers__wrap:hover h3 {
@@ -89,7 +73,6 @@
   padding-top: 52px;
   display: flex;
   justify-content: space-between;
-  // background-color: #102654;
 }
 
 .trainers__text {
@@ -147,18 +130,192 @@
   z-index: -1;
 }
 
+.trainers__slider__control {
+  position: absolute;
+  display: flex;
+  top: 50%;
+  transform: translateY(-50%);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 16px;
+  height: 32px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  &--left {
+    // left: -12px;
+    left: -1%;
+    top: 306px;
+  }
+
+  &--right {
+    // right: -12px;
+    right: -1%;
+    top: 306px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 16px;
+    height: 32px;
+    background: transparent no-repeat center center;
+    background-size: 100% 100%;
+  }
+
+  &--left::before {
+    background-image: url("../img/slider-left.svg");
+  }
+
+  &--right::before {
+    background-image: url("../img/slider-right.svg");
+  }
+}
+
 @media (max-width: $tablet-width) {
   .trainers {
-    padding-top: 58px;
-    padding-bottom: 77px;
-    height: 537px;  // УДАЛИТЬ!!!!!!!!!!!!
+    padding-top: 59px;
+    padding-bottom: 100px;
+  }
+
+  .trainers h2 {
+    font-size: 42px;
+    line-height: 42px;
+    text-align: center;
+  }
+
+  .trainers__slider {
+    margin: 0 auto;
+    // width: 92.8%;
+    // padding-left: 45px;
+    // padding-right: 45px;
+  }
+
+  .trainers__item {
+    position: relative;
+    min-height: 294px;
+    width: 268px;
+  }
+
+  .trainers__wrap {
+    width: 268px;
+    margin-right: 40px;
+    min-height: 294px;
+
+    &:hover {
+      background: rgba(16, 38, 84, 0.89);
+    }
+  }
+
+  .trainers__list {
+    padding-top: 41px;
+  }
+
+  .trainers__image {
+    width: 268px;
+  }
+
+  .trainers__slider__control {
+    &--left {
+      // left: -12px;
+      left: 44px;
+      top: 289px;
+    }
+
+    &--right {
+      // right: -12px;
+      right: 44px;
+      top: 289px;
+    }
   }
 }
 
 @media (max-width: $mobile-width) {
   .trainers {
-    padding-top: 58px;
-    padding-bottom: 0;
-    height: 460px;  // УДАЛИТЬ!!!!!!!!!!!!
+    padding-top: 40px;
+    padding-bottom: 72px;
+  }
+
+  .trainers h2 {
+    font-size: 32px;
+    line-height: 32px;
+    text-align: center;
+  }
+
+  .trainers h3 {
+    padding-top: 220px;
+  }
+
+  .trainers__slider {
+    margin: 0 auto;
+    // width: 92.8%;
+    // padding-left: 45px;
+    // padding-right: 45px;
+  }
+
+  .trainers__item {
+    position: relative;
+    min-height: 274px;
+    width: 226px;
+    margin: 0 auto;
+  }
+
+  .trainers__wrap {
+    width: 226px;
+    // margin: 0 auto;
+    // margin-right: 0;
+    min-height: 274px;
+
+
+    &:hover {
+      background: rgba(16, 38, 84, 0.89);
+    }
+  }
+
+  .trainers__list {
+    width: 100%;
+    padding-top: 41px;
+    margin: 0 auto;
+  }
+
+  .trainers__image {
+    width: 226px;
+    height: 274px;
+    margin: 0 auto;
+  }
+
+  .trainers__wrap:hover h3 {
+    padding-top: 43px;
+  }
+
+  .trainers__experience__list {
+    padding-left: 50px;
+  }
+
+  .trainers__slider__control {
+    width: 10px;
+    height: 19px;
+
+    &::before {
+      content: "";
+      width: 10px;
+      height: 19px;
+    }
+
+    &--left {
+      // left: -12px;
+      left: 13px;
+      top: 252px;
+    }
+
+    &--right {
+      // right: -12px;
+      right: 13px;
+      top: 252px;
+    }
   }
 }

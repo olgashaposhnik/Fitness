@@ -1,0 +1,73 @@
+.swiper-container {
+  width: 560px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: transparent;
+  border: none;
+  width: 16px;
+  height: 32px;
+  outline: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 16px;
+    height: 32px;
+    background: transparent no-repeat center center;
+    background-size: 100% 100%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 16px;
+    height: 32px;
+    background: transparent no-repeat center center;
+    background-size: 100% 100%;
+  }
+}
+
+.swiper-button-next {
+  right: 288px;
+  top: 297px;
+
+  &::before {
+    background-image: url("../img/slider-right.svg");
+  }
+}
+
+.swiper-button-prev {
+  left: 288px;
+  top: 297px;
+
+  &::before {
+    background-image: url("../img/slider-left.svg");
+  }
+}
+
+.swiper-container-trainers {
+  width: 1160px;
+  overflow: hidden;
+}
+
+@media (max-width: $tablet-width) {
+  .swiper-container-trainers {
+    width: 100%;
+    max-width: 566px;
+    // width: 1160px;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .swiper-container-trainers {
+    // width: 100%;
+    width: 226px;
+    max-width: 442px;
+    overflow: hidden;
+  }
+}

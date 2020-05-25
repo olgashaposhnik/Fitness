@@ -73,6 +73,62 @@
   padding-bottom: 12px;
 }
 
+// .reviews__slider__control {
+//   position: absolute;
+//   display: flex;
+//   top: 50%;
+//   transform: translateY(-50%);
+//   align-items: center;
+//   justify-content: center;
+//   text-align: center;
+//   width: 16px;
+//   height: 32px;
+//   cursor: pointer;
+//   background-color: transparent;
+//   border: none;
+//   outline: none;
+
+//   &--left {
+//     left: 288px;
+//     top: 290px;
+//   }
+
+//   &--right {
+//     right: 288px;
+//     top: 290px;
+//   }
+
+//   // &--left__trainers {
+//   //   // left: -12px;
+//   //   left: -1%;
+//   //   top: 306px;
+//   // }
+
+//   // &--right__trainers {
+//   //   // right: -12px;
+//   //   right: -1%;
+//   //   top: 306px;
+//   // }
+
+//   // &::before {
+//   //   content: "";
+//   //   position: absolute;
+//   //   display: inline-block;
+//   //   width: 16px;
+//   //   height: 32px;
+//   //   background: transparent no-repeat center center;
+//   //   background-size: 100% 100%;
+//   // }
+
+//   &--left::before {
+//     background-image: url("../img/slider-left.svg");
+//   }
+
+//   &--right::before {
+//     background-image: url("../img/slider-right.svg");
+//   }
+// }
+
 @media (max-width: $tablet-width) {
   .reviews {
     padding-bottom: 100px;

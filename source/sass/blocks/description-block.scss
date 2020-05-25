@@ -104,7 +104,8 @@
     background-image: url("../img/description-button@2x.png");
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     width: 100px;
     height: 100px;
     border: 2px solid #003d85;
