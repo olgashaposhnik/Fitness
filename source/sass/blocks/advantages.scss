@@ -150,11 +150,15 @@
   margin: 0;
   color: transparent;
   background-color: #003d85;
-  background-image: url("../img/header-background.svg");
+  background-image: url("../img/header-background@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-clip: text;
   margin-top: -29px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/header-background@2x.jpg");
+  }
 }
 
 .advantages__unit {

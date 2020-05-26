@@ -127,6 +127,17 @@
   padding-left: 10px;
   padding-right: 10px;
   width: 100%;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color: #ffffff;
+    color: #ed0233;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .competitions__image {

@@ -31,22 +31,28 @@
   margin-right: 40px;
   min-height: 294px;
 
-  &:hover {
+  &:hover,
+  &:focus {
+    outline: none;
     background: rgba(16, 38, 84, 0.89);
   }
 }
 
-.trainers__wrap:hover h3 {
+.trainers__wrap:hover h3,
+.trainers__wrap:focus h3 {
   padding-top: 52px;
   margin-bottom: -4px;
 }
 
-.trainers__wrap:hover .trainers__text {
+.trainers__wrap:hover .trainers__text,
+.trainers__wrap:focus .trainers__text {
   padding-bottom: 32px;
 }
 
 .trainers__wrap:hover .trainers__text,
-.trainers__wrap:hover .trainers__experience__list {
+.trainers__wrap:hover .trainers__experience__list,
+.trainers__wrap:focus .trainers__text,
+.trainers__wrap:focus .trainers__experience__list {
   display: block;
   flex-direction: column;
 }
@@ -147,14 +153,24 @@
 
   &--left {
     // left: -12px;
-    left: -1%;
-    top: 306px;
+    // left: -1%;
+    // top: 306px;
+    left: calc(50% - 637px);
+    top: 53.5%;
+
+    @media (max-width: 1365px) {
+      left: 1%;
+    }
   }
 
   &--right {
     // right: -12px;
-    right: -1%;
-    top: 306px;
+    right: calc(50% - 637px);
+    top: 53.5%;
+
+    @media (max-width: 1365px) {
+      right: 1%;
+    }
   }
 
   &::before {
@@ -173,6 +189,15 @@
 
   &--right::before {
     background-image: url("../img/slider-right.svg");
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }
 
@@ -222,14 +247,16 @@
   .trainers__slider__control {
     &--left {
       // left: -12px;
-      left: 44px;
-      top: 289px;
+      // left: 44px;
+      // top: 289px;
+      left: calc(50% - 340px);
+      top: 54%;
     }
 
     &--right {
       // right: -12px;
-      right: 44px;
-      top: 289px;
+      right: calc(50% - 340px);
+      top: 54%;
     }
   }
 }
@@ -308,14 +335,17 @@
 
     &--left {
       // left: -12px;
-      left: 13px;
-      top: 252px;
+      // left: 13px;
+      left: calc(50% - 146px);
+      top: 55%;
     }
 
     &--right {
       // right: -12px;
-      right: 13px;
-      top: 252px;
+      right: calc(50% - 146px);
+      // top: 252px;
+      top: 55%;
     }
   }
 }
+

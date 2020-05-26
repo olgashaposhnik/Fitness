@@ -2,11 +2,13 @@
   display: flex;
   width: 431px;
   margin-left: 20px;
+  flex-wrap: wrap;
 }
 
 .navigation__list {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 0;
   margin: 0;
@@ -20,7 +22,9 @@
 
 .navigation__items {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   &--left {
     width: 153px;
@@ -31,8 +35,20 @@
   }
 }
 
+.navigation__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 .navigation__link {
-  &:hover {
+  display: flex;
+  flex-wrap: wrap;
+
+  &:hover,
+  &:focus {
+    outline: none;
     opacity: 0.8;
   }
 

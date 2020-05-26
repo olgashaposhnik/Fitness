@@ -10,7 +10,7 @@
   font-size: 0;
 }
 
-.form__input {
+.form input {
   width: 190px;
   font-family: "RobotoCondensed-Regular", "Arial", sans-serif;
   font-style: normal;
@@ -63,7 +63,9 @@
   // margin-bottom: 114px;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
+    outline: none;
     background: #ffffff;
     color: #102654;
     border: 3px solid #102654;
@@ -80,7 +82,7 @@
     max-width: 786px;
   }
 
-  .form__input {
+  .form input {
     width: 44%;
   }
 }
@@ -90,7 +92,7 @@
     max-width: 442px;
   }
 
-  .form__input {
+  .form input {
     width: 100%;
     margin-bottom: 41px;
   }

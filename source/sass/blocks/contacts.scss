@@ -22,7 +22,8 @@
 .contacts__wrapper {
   max-width: 580px;
   width: 91%;
-  padding-right: 9%;
+  // padding-right: 9%;
+  padding-right: 56px;
   padding-bottom: 46px;
   display: flex;
   justify-content: flex-end;
@@ -126,6 +127,18 @@
     font-size: 18px;
     line-height: 152.34%;
     padding-left: 0;
+  }
+}
+
+.contacts__link {
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }
 

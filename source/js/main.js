@@ -19,203 +19,106 @@ var swiperTtrainers = new Swiper('.swiper-container-trainers', {
   breakpoints: {
     320: {
       slidesPerView: 1,
+      slidesPerGroup: 1,
       // spaceBetween: 20,
     },
     768: {
       slidesPerView: 2,
+      slidesPerGroup: 2,
       spaceBetween: 30,
     },
-    1220: {
+    1200: {
       slidesPerView: 4,
+      slidesPerGroup: 4,
       spaceBetween: 40,
     },
   }
 });
 
-// var mySwiper = new Swiper('.swiper-container', {
-//   // Optional parameters
-//   direction: 'vertical',
-//   loop: true,
+// плавная прокрутка к якорю
 
-//   // If we need pagination
-//   pagination: {
-//     el: '.swiper-pagination',
-//   },
+const anchors = document.querySelectorAll('.anchor')
 
-//   // Navigation arrows
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
+for (let anchor of anchors) {
+  anchor.addEventListener('click', function (evt) {
+    evt.preventDefault()
 
-//   // And if we need scrollbar
-//   scrollbar: {
-//     el: '.swiper-scrollbar',
-//   },
-// })
+    const blockID = anchor.getAttribute('href').substr(1)
 
+    document.getElementById(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  })
+}
 
-// // Реализация слайдера в блоке "отзывы"
-// var multiItemSlider = (function () {
-//   return function (selector) {
-//     var mainElement = document.querySelector(selector); // основной элемент блока
-//     var sliderWrapper = mainElement.querySelector('.slider__wrapper'); // обертка для .slider-item
-//     var sliderItems = mainElement.querySelectorAll('.slider__item'); // элементы (.slider-item)
-//     var sliderControls = mainElement.querySelectorAll('.slider__control'); // элементы управления
-//     // var sliderControlLeft = mainElement.querySelector('.slider__control--left'); // кнопка "LEFT"
-//     // var sliderControlRight = mainElement.querySelector('.slider__control--right'); // кнопка "RIGHT"
-//     var wrapperWidth = parseFloat(getComputedStyle(sliderWrapper).width); // ширина обёртки
-//     var itemWidth = parseFloat(getComputedStyle(sliderItems[0]).width); // ширина одного элемента
-//     var positionLeftItem = 0; // позиция левого активного элемента
-//     var transform = 0; // значение транфсофрмации .sliderwrapper
-//     var step = itemWidth / wrapperWidth * 100; // величина шага (для трансформации)
-//     var items = []; // массив элементов
-//     // наполнение массива items
-//     sliderItems.forEach(function (item, index) {
-//       items.push({item: item, position: index, transform: 0});
-//     });
+// реализация табов
 
-//     // var position = {
-//     //   getMin: 0,
-//     //   getMax: items.length - 1
-//     // };
+var $tabs = function (target) {
+  var
+    _elemTabs = (typeof target === 'string' ? document.querySelector(target) : target),
+    _eventTabsShow,
+    _showTab = function (tabsLinkTarget) {
+      var tabsPaneTarget, tabsLinkActive, tabsPaneShow;
+      tabsPaneTarget = document.querySelector(tabsLinkTarget.getAttribute('href'));
+      tabsLinkActive = tabsLinkTarget.parentElement.querySelector('.tabs__link_active');
+      tabsPaneShow = tabsPaneTarget.parentElement.querySelector('.tabs__pane_show');
+      // если следующая вкладка равна активной, то завершаем работу
+      if (tabsLinkTarget === tabsLinkActive) {
+        return;
+      }
+      // удаляем классы у текущих активных элементов
+      if (tabsLinkActive !== null) {
+        tabsLinkActive.classList.remove('tabs__link_active');
+      }
+      if (tabsPaneShow !== null) {
+        tabsPaneShow.classList.remove('tabs__pane_show');
+      }
+      // добавляем классы к элементам (в завимости от выбранной вкладки)
+      tabsLinkTarget.classList.add('tabs__link_active');
+      tabsPaneTarget.classList.add('tabs__pane_show');
+      document.dispatchEvent(_eventTabsShow);
+    },
+    _switchTabTo = function (tabsLinkIndex) {
+      var tabsLinks = _elemTabs.querySelectorAll('.tabs__link');
+      if (tabsLinks.length > 0) {
+        if (tabsLinkIndex > tabsLinks.length) {
+          tabsLinkIndex = tabsLinks.length;
+        } else if (tabsLinkIndex < 1) {
+          tabsLinkIndex = 1;
+        }
+        _showTab(tabsLinks[tabsLinkIndex - 1]);
+      }
+    };
 
-//     var position = {
-//       getItemMin: function () {
-//         var indexItem = 0;
-//         items.forEach(function (item, index) {
-//           if (item.position < items[indexItem].position) {
-//             indexItem = index;
-//           }
-//         });
-//         return indexItem;
-//       },
-//       getItemMax: function () {
-//         var indexItem = 0;
-//         items.forEach(function (item, index) {
-//           if (item.position > items[indexItem].position) {
-//             indexItem = index;
-//           }
-//         });
-//         return indexItem;
-//       },
-//       getMin: function () {
-//         return items[position.getItemMin()].position;
-//       },
-//       getMax: function () {
-//         return items[position.getItemMax()].position;
-//       }
-//     };
+  _eventTabsShow = new CustomEvent('tab.show', { detail: _elemTabs });
 
-//     var transformItem = function (direction) {
-//       var nextItem;
-//       if (direction === 'right') {
-//         positionLeftItem++;
-//         if ((positionLeftItem + wrapperWidth / itemWidth - 1) > position.getMax()) {
-//           nextItem = position.getItemMin();
-//           items[nextItem].position = position.getMax() + 1;
-//           items[nextItem].transform += items.length * 100;
-//           items[nextItem].item.style.transform = 'translateX(' + items[nextItem].transform + '%)';
-//         }
-//         transform -= step;
-//       }
-//       if (direction === 'left') {
-//         positionLeftItem--;
-//         if (positionLeftItem < position.getMin()) {
-//           nextItem = position.getItemMax();
-//           items[nextItem].position = position.getMin() - 1;
-//           items[nextItem].transform -= items.length * 100;
-//           items[nextItem].item.style.transform = 'translateX(' + items[nextItem].transform + '%)';
-//         }
-//         transform += step;
-//       }
-//       sliderWrapper.style.transform = 'translateX(' + transform + '%)';
-//     };
+  _elemTabs.addEventListener('click', function (e) {
+    var tabsLinkTarget = e.target;
+    // завершаем выполнение функции, если кликнули не по ссылке
+    if (!tabsLinkTarget.classList.contains('tabs__link')) {
+      return;
+    }
+    // отменяем стандартное действие
+    e.preventDefault();
+    _showTab(tabsLinkTarget);
+  });
 
-//     // var transformItem = function (direction) {
-//     //   if (direction === 'right') {
-//     //     if ((positionLeftItem + wrapperWidth / itemWidth - 1) >= position.getMax) {
-//     //       return;
-//     //     }
-//     //     if (!sliderControlLeft.classList.contains('slider__control--show')) {
-//     //       sliderControlLeft.classList.add('slider__control--show');
-//     //     }
-//     //     if (sliderControlRight.classList.contains('slider__control--show') && (positionLeftItem + wrapperWidth / itemWidth) >= position.getMax) {
-//     //       sliderControlRight.classList.remove('slider__control--show');
-//     //     }
-//     //     positionLeftItem++;
-//     //     transform -= step;
-//     //   }
-//     //   if (direction === 'left') {
-//     //     if (positionLeftItem <= position.getMin) {
-//     //       return;
-//     //     }
-//     //     if (!sliderControlRight.classList.contains('slider__control--show')) {
-//     //       sliderControlRight.classList.add('slider__control--show');
-//     //     }
-//     //     if (sliderControlLeft.classList.contains('slider__control--show') && positionLeftItem - 1 <= position.getMin) {
-//     //       sliderControlLeft.classList.remove('slider__control--show');
-//     //     }
-//     //     positionLeftItem--;
-//     //     transform += step;
-//     //   }
-//     //   sliderWrapper.style.transform = 'translateX(' + transform + '%)';
-//     // };
+  return {
+    showTab: function (target) {
+      _showTab(target);
+    },
+    switchTabTo: function (index) {
+      _switchTabTo(index);
+    }
+  }
 
-//     // обработчик события click для кнопок "назад" и "вперед"
-//     var controlClick = function (e) {
-//       if (e.target.classList.contains('slider__control')) {
-//         e.preventDefault();
-//         var direction = e.target.classList.contains('slider__control--right') ? 'right' : 'left';
-//         transformItem(direction);
-//       }
-//     };
+};
 
-//     // // обработчик события click для кнопок "назад" и "вперед"
-//     // var controlClick = function (e) {
-//     //   if (e.target.classList.contains('slider__control')) {
-//     //     e.preventDefault();
-//     //     var direction = e.target.classList.contains('slider__control--right') ? 'right' : 'left';
-//     //     transformItem(direction);
-//     //   }
-//     // };
+$tabs('.tabs');
 
-//     var setUpListeners = function () {
-//       // добавление к кнопкам "назад" и "вперед" обрботчика _controlClick для события click
-//       sliderControls.forEach(function (item) {
-//         item.addEventListener('click', controlClick);
-//       });
-//     };
-
-//     // var setUpListeners = function () {
-//     //   // добавление к кнопкам "назад" и "вперед" обрботчика _controlClick для событя click
-//     //   sliderControls.forEach(function (item) {
-//     //     item.addEventListener('click', controlClick);
-//     //   });
-//     // };
-
-//     // инициализация
-//     setUpListeners();
-
-//     return {
-//       right: function () { // метод right
-//         transformItem('right');
-//       },
-//       left: function () { // метод left
-//         transformItem('left');
-//       }
-//     };
-
-//     // return {
-//     //   right: function () { // метод right
-//     //     transformItem('right');
-//     //   },
-//     //   left: function () { // метод left
-//     //     transformItem('left');
-//     //   }
-//     // };
-//   };
-// }());
-
-// var slider = multiItemSlider('.slider');
+var listTabs = document.querySelectorAll('.tabs');
+for (var i = 0, length = listTabs.length; i < length; i++) {
+  $tabs(listTabs[i]);
+}
 

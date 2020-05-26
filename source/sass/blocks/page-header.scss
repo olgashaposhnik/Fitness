@@ -1,23 +1,27 @@
 .page-header {
   background-color: #003d85;
-  background-image: url("../img/header-background.svg");
+  background-image: url("../img/header-background@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   color: #ffffff;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/header-background@2x.jpg");
+  }
 }
 
 .page-header__wrapper {
   display: flex;
   flex-direction: column;
   padding-top: 30px;
-  background-image: url("../img/trainer-main@1x.png");
+  background-image: url("../img/trainer-main@1x.jpg");
   background-position: top 50px left calc(50% + 130px);
   background-repeat: no-repeat;
   // background-size: 500px, 556px;
   background-size: 500px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/trainer-main@2x.png");
+    background-image: url("../img/trainer-main@2x.jpg");
   }
 }
 
@@ -27,8 +31,11 @@
   justify-content: space-between;
 }
 
-.page-header__logo {
-  &:hover {
+.page-header a {
+  outline: none;
+
+  &:hover,
+  &:focus {
     opacity: 0.8;
   }
 
@@ -110,13 +117,15 @@
 
 @media (max-width: $tablet-width) {
   .page-header__wrapper {
-    background-image: url("../img/trainer-main-tablet@1x.png");
+    background-image: url("../img/trainer-main-tablet@1x.jpg");
     background-position: top 82px left calc(50% + 177px);
     background-size: 324px;
+    // background-size: 359px; // если подбирать размер от десктопной версии
+    // clip-path: inset(5% 20% 15% 10%);
     padding-top: 40px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/trainer-main-tablet@2x.png");
+      background-image: url("../img/trainer-main-tablet@2x.ipg");
     }
   }
 

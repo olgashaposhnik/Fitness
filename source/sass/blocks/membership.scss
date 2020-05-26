@@ -61,6 +61,22 @@
   padding-bottom: 11px;
   margin-bottom: -2px;
   border-bottom: 2px solid transparent;
+  font-family: "RobotoCondensed-Regular", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 150%;
+  color: rgba(16, 38, 84, 0.5);
+  cursor: default;
+
+  &:focus {
+    outline: none;
+    color: #102654;
+  }
+}
+
+.membership__tab-contents {
+  width: 100%;
 }
 
 .membership__tab-content {
@@ -69,58 +85,18 @@
   justify-content: space-between;
 }
 
-.membership input[type="radio"] {
-  display: none;
-}
-
-.membership input[type="radio"]:checked + label {
-  font-family: "RobotoCondensed-Regular", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 150%;
-  color: #102654;
-  cursor: default;
-}
-
-.membership__controls > div {
-  display: none;
-}
-
-.membership input[id="tab1"]:checked ~ #content-2,
-.membership input[id="tab1"]:checked ~ #content-3,
-.membership input[id="tab2"]:checked ~ #content-1,
-.membership input[id="tab2"]:checked ~ #content-3,
-.membership input[id="tab3"]:checked ~ #content-1,
-.membership input[id="tab3"]:checked ~ #content-2 {
-  display: none;
-}
-
-.membership input[id="tab1"]:checked ~ .membership__controls label[for=tab1],
-.membership input[id="tab2"]:checked ~ .membership__controls label[for=tab2],
-.membership input[id="tab3"]:checked ~ .membership__controls label[for=tab3] {
-  border-bottom: 2px solid #d10a42;
-  color: #102654;
-}
-
-.membership input[id=tab1]:checked ~ #content-1,
-.membership input[id=tab2]:checked ~ #content-2,
-.membership input[id=tab3]:checked ~ #content-3 {
-  display: block;
-}
-
-.membership__controls > label {
-  display: inline-block;
-  user-select: none;
-  transition: color 0.15s ease-in-out;
-  cursor: pointer;
-  font-family: "RobotoCondensed-Regular", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 150%;
-  color: rgba(16, 38, 84, 0.5);
-}
+// .membership__controls > label {
+//   display: inline-block;
+//   user-select: none;
+//   transition: color 0.15s ease-in-out;
+//   cursor: pointer;
+//   font-family: "RobotoCondensed-Regular", "Arial", sans-serif;
+//   font-style: normal;
+//   font-weight: normal;
+//   font-size: 20px;
+//   line-height: 150%;
+//   color: rgba(16, 38, 84, 0.5);
+// }
 
 .membership__tab-list {
   width: 100%;
@@ -140,11 +116,13 @@
   align-items: center;
   width: 31%;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-image: url("../img/membership__item-bg@1x.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
+    outline: none;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/membership__item-bg@2x.png");
@@ -161,11 +139,38 @@
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
-  padding-left: 0;
-  padding-right: 0;
   border: 2px solid transparent;
   color: #ffffff;
   min-width: 210px;
+}
+
+.membership__item:focus .membership__button:focus {
+  font-family: "RobotoCondensed-Regular", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 68px;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid #102654;
+  padding-top: 24px;
+  padding-bottom: 23px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  min-width: 206px;
+  max-width: 300px;
 }
 
 .membership__header {
@@ -258,6 +263,16 @@
   margin-right: 20px;
   min-width: 206px;
   max-width: 300px;
+
+  &:focus {
+    background-image: url("../img/membership-button-hover.svg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px solid transparent;
+    color: #ffffff;
+    min-width: 210px;
+  }
 }
 
 @media (max-width: $tablet-width) {
@@ -281,11 +296,6 @@
     }
   }
 
-  // .membership__container {
-  //   display: flex;
-  //   flex-direction: column;
-  // }
-
   .membership h2 {
     font-size: 42px;
     line-height: 42px;
@@ -308,6 +318,7 @@
 
   .membership__tab-title {
     padding-bottom: 10px;
+    font-size: 18px;
   }
 
   .membership__tab-content {
@@ -316,17 +327,13 @@
     justify-content: space-between;
   }
 
-  // .membership input[type="radio"] {
-  //   display: none;
+  // .membership input[type="radio"]:checked + label {
+  //   font-size: 18px;
   // }
 
-  .membership input[type="radio"]:checked + label {
-    font-size: 18px;
-  }
-
-  .membership__controls > label {
-    font-size: 18px;
-  }
+  // .membership__controls > label {
+  //   font-size: 18px;
+  // }
 
   .membership__tab-list {
     display: flex;
@@ -498,6 +505,7 @@
 
   .membership__tab-title {
     padding-bottom: 10px;
+    font-size: 16px;
   }
 
   .membership__tab-content {
@@ -510,13 +518,13 @@
   //   display: none;
   // }
 
-  .membership input[type="radio"]:checked + label {
-    font-size: 16px;
-  }
+  // .membership input[type="radio"]:checked + label {
+  //   font-size: 16px;
+  // }
 
-  .membership__controls > label {
-    font-size: 16px;
-  }
+  // .membership__controls > label {
+  //   font-size: 16px;
+  // }
 
   .membership__tab-list {
     display: flex;
