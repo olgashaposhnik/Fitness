@@ -95,6 +95,14 @@
     background: #1c3374;
     color: #ffffff;
   }
+
+  &:nth-child(1) {
+    margin-right: auto;
+  }
+
+  &:nth-child(5) {
+    margin-left: auto;
+  }
 }
 
 .advantages__item:nth-child(3) p,
@@ -182,6 +190,7 @@
   padding: 0;
   margin: 0;
   margin-top: -21px;
+  margin-top: auto;
 }
 
 .advantages__wrap {

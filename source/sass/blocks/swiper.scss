@@ -2,6 +2,10 @@
   width: 560px;
 }
 
+.swiper-wrapper {
+  display: flex;
+}
+
 .swiper-button-prev,
 .swiper-button-next {
   background-color: transparent;

@@ -85,6 +85,7 @@
 .page-header__social__item {
   cursor: pointer;
   text-align: right;
+  padding-bottom: 15px;
 
   &--facebook {
     padding-bottom: 15px;
@@ -104,6 +105,10 @@
 
   &--instagram svg {
     padding-left: 4px;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
   }
 
   &:hover {
