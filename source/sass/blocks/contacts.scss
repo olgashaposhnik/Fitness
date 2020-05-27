@@ -51,6 +51,12 @@
   }
 }
 
+.contacts__items {
+  &--left {
+    margin-right: auto;
+  }
+}
+
 .contacts__item {
   padding-bottom: 18px;
 }
