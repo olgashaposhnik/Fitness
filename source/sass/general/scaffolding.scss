@@ -1,7 +1,8 @@
 @font-face {
   font-family: "BebasNeue-Bold";
-  src: url("../fonts/bebasneuebold.woff2") format("woff2"),
-    url("../fonts/bebasneuebold.woff") format("woff");
+  // src: url("../fonts/bebasneuebold.woff2") format("woff2"),
+    // url("../fonts/bebasneuebold.woff") format("woff");
+    src: url("../fonts/bebasneuebold.woff") format("woff")
   font-display: swap;
   font-weight: 700;
   font-style: normal;
@@ -9,8 +10,9 @@
 
 @font-face {
   font-family: "BebasNeue-Regular";
-  src: url("../fonts/bebasneueregular.woff2") format("woff2"),
-    url("../fonts/bebasneueregular.woff") format("woff");
+  // src: url("../fonts/bebasneueregular.woff2") format("woff2"),
+    // url("../fonts/bebasneueregular.woff") format("woff");
+    src: url("../fonts/bebasneueregular.woff") format("woff")
   font-display: swap;
   font-weight: 400;
   font-style: normal;

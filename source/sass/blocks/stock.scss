@@ -39,13 +39,13 @@
   position: relative;
   min-height: 462px;
   padding-bottom: 80px;
-  background-image: url("../img/stock@1x.png");
+  background-image: url("../img/stock@1x.jpg");
   background-repeat: no-repeat;
   background-size: 280px;
   background-position: right 0;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/stock@2x.png");
+    background-image: url("../img/stock@2x.jpg");
   }
 }
 
@@ -135,7 +135,7 @@
   display: flex;
   flex-direction: column;
   min-height: 211px;
-  background-image: url("../img/stock-bg@1x.png");
+  background-image: url("../img/stock-bg@1x.jpg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
@@ -145,7 +145,7 @@
   padding-bottom: 60px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/stock-bg@2x.png");
+    background-image: url("../img/stock-bg@2x.jpg");
   }
 
   &:first-child {
@@ -190,12 +190,14 @@
 
   .stock__main {
     width: 100%;
-    background-image: url("../img/stock-tablet@1x.png");
+    // background-image: url("../img/stock-tablet@1x.png");
+    background-image: url("../img/stock-tablet@1x.jpg");
     background-size: 399px;
     margin-bottom: 30px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/stock-tablet@2x.png");
+      // background-image: url("../img/stock-tablet@2x.png");
+      background-image: url("../img/stock-tablet@2x.jpg");
     }
   }
 
@@ -216,11 +218,11 @@
     display: flex;
     flex-direction: column;
     min-height: 211px;
-    background-image: url("../img/stock-bg-tablet@1x.png");
+    background-image: url("../img/stock-bg-tablet@1x.jpg");
     padding-left: 35px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/stock-bg-tablet@2x.png");
+      background-image: url("../img/stock-bg-tablet@2x.jpg");
     }
 
     &:first-child {
@@ -245,14 +247,16 @@
 
   .stock__main {
     width: 100%;
-    background-image: url("../img/stock-mobile@1x.png");
+    // background-image: url("../img/stock-mobile@1x.png");
+    background-image: url("../img/stock-mobile@1x.jpg");
     background-size: 290px;
     margin-bottom: 30px;
     background-position: bottom;
     padding-bottom: 299px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/stock-mobile@2x.png");
+      // background-image: url("../img/stock-mobile@2x.png");
+      background-image: url("../img/stock-mobile@2x.jpg");
     }
   }
 
@@ -289,13 +293,13 @@
     flex-direction: column;
     min-height: 211px;
     align-items: center;
-    background-image: url("../img/stock-bg-mobile@1x.png");
+    background-image: url("../img/stock-bg-mobile@1x.jpg");
     padding-left: 0;
     margin-bottom: 30px;
     padding-bottom: 46px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/stock-bg-mobile@2x.png");
+      background-image: url("../img/stock-bg-mobile@2x.jpg");
     }
 
     &:first-child {
