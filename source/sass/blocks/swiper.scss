@@ -4,6 +4,8 @@
 
 .swiper-wrapper {
   display: flex;
+  min-height: 100%;
+  height: auto;
 }
 
 .swiper-button-prev,
