@@ -17,6 +17,7 @@
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/dumbbells@2x.png");
+      background-size: 287px auto;
     }
   }
 }
@@ -144,7 +145,7 @@
 
 .membership__item:hover .membership__button {
   background-image: url("../img/membership-button-hover.svg");
-  background-size: 100% 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   border: 2px solid transparent;

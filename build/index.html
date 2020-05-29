@@ -69,27 +69,29 @@
           <p>Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.</p>
           <p>В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажерами. Также в фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</p>
         </div>
-        <div class="description-block__image-wrap video">
+        <div class="description-block__image-wrap">
           <picture>
-            <source media="(max-width: 767px)" srcset="img/gym-mobile@1x.webp 1x, img/gym-mobile@2x.webp 2x" type="image/webp">
-            <source media="(max-width: 1199px)" srcset="img/gym-tablet@1x.webp 1x, img/gym-tablet@2x.webp 2x" type="image/webp">
+            <!-- <source media="(max-width: 767px)" srcset="img/gym-mobile@1x.webp 1x, img/gym-mobile@2x.webp 2x" type="image/webp">
+            <source media="(max-width: 1199px)" srcset="img/gym-tablet@1x.webp 1x, img/gym-tablet@2x.webp 2x" type="image/webp"> -->
             <source srcset="img/gym@1x.webp 1x, img/gym@2x.webp 2x" type="image/webp">
-            <source media="(max-width: 767px)" srcset="img/gym-mobile@1x.png 1x, img/gym-mobile@2x.png 2x">
-            <source media="(max-width: 1199px)" srcset="img/gym-tablet@1x.png 1x, img/gym-tablet@2x.png 2x">
+            <!-- <source media="(max-width: 767px)" srcset="img/gym-mobile@1x.png 1x, img/gym-mobile@2x.png 2x">
+            <source media="(max-width: 1199px)" srcset="img/gym-tablet@1x.png 1x, img/gym-tablet@2x.png 2x"> -->
             <!-- 1х: 660px; 2x: 1320px -->
             <img class="description-block__image" src="img/gym@1x.jpg" srcset="img/gym@2x.jpg 2x" height="401" width="660" alt="Фитнес-центр «Supergym»">
           </picture>
         </div>
         <div class="description-block__video video">
-          <picture>
-            <source media="(max-width: 767px)" srcset="img/gym-video-mobile@1x.webp 1x, img/gym-video-mobile@2x.webp 2x" type="image/webp">
-            <source media="(max-width: 1199px)" srcset="img/gym-video-tablet@1x.webp 1x, img/gym-video-tablet@2x.webp 2x" type="image/webp">
-            <source srcset="img/gym-video@1x.webp 1x, img/gym-video@2x.webp 2x" type="image/webp">
-            <source media="(max-width: 767px)" srcset="img/gym-video-mobile@1x.png 1x, img/gym-video-mobile@2x.png 2x">
-            <source media="(max-width: 1199px)" srcset="img/gym-video-tablet@1x.png 1x, img/gym-video-tablet@2x.png 2x">
-            <!-- 1х: 364px; 2x: 728px -->
-            <img class="description-block__video-image" src="img/gym-video@1x.jpg" srcset="img/gym-video@2x.jpg 2x" height="228" width="364" alt="Видео фитнес-центра «Supergym»">
-          </picture>
+          <div class="description-block__video-wrap">
+            <picture>
+              <!-- <source media="(max-width: 767px)" srcset="img/gym-video-mobile@1x.webp 1x, img/gym-video-mobile@2x.webp 2x" type="image/webp">
+              <source media="(max-width: 1199px)" srcset="img/gym-video-tablet@1x.webp 1x, img/gym-video-tablet@2x.webp 2x" type="image/webp"> -->
+              <source srcset="img/gym-video@1x.webp 1x, img/gym-video@2x.webp 2x" type="image/webp">
+              <!-- <source media="(max-width: 767px)" srcset="img/gym-video-mobile@1x.png 1x, img/gym-video-mobile@2x.png 2x">
+              <source media="(max-width: 1199px)" srcset="img/gym-video-tablet@1x.png 1x, img/gym-video-tablet@2x.png 2x"> -->
+              <!-- 1х: 364px; 2x: 728px -->
+              <img class="description-block__video-image" src="img/gym-video@1x.jpg" srcset="img/gym-video@2x.jpg 2x" height="228" width="364" alt="Видео фитнес-центра «Supergym»">
+            </picture>
+          </div>
           <button aria-label="Посмотреть видео о нас" type="button" class="description-block__video-button video__button" tabindex="0"></button>
         </div>
       </div>
@@ -332,8 +334,8 @@
           </li>
         </ul>
       </div>
-      <button type="button" class="trainers__slider__control trainers__slider__control--left"></button>
-      <button type="button" class="trainers__slider__control trainers__slider__control--right"></button>
+      <button aria-label="прокрутить список тренеров влево" type="button" class="trainers__slider__control trainers__slider__control--left"></button>
+      <button aria-label="прокрутить список тренеров вправо" type="button" class="trainers__slider__control trainers__slider__control--right"></button>
     </section>
     <section class="advantages">
       <div class="advantages__container container">
@@ -508,8 +510,8 @@
           </div>
         </div>
       </div>
-      <button type="button" class="swiper-button-prev reviews__slider__control reviews__slider__control--left"></button>
-      <button type="button" class="swiper-button-next reviews__slider__control reviews__slider__control--right"></button>
+      <button aria-label="прокрутить список тренеров влево" type="button" class="swiper-button-prev reviews__slider__control reviews__slider__control--left"></button>
+      <button aria-label="прокрутить список тренеров вправо" type="button" class="swiper-button-next reviews__slider__control reviews__slider__control--right"></button>
     </section>
     <section class="wrapper">
       <h2 class="visually-hidden">Занятия и контакты</h2>
@@ -612,9 +614,9 @@
       </div>
     </div>
   </footer>
-  <script src="js/vendor.js"></script>
+  <script src="js/vendor.js" async=""></script>
   <script src="js/main.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/svgxuse/1.2.6/svgxuse.min.js" async=""></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/svgxuse/1.2.6/svgxuse.min.js" async></script> -->
 </body>
 
 </html>

@@ -15,6 +15,7 @@ var svgstore = require("gulp-svgstore")
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
+var concat = require('gulp-concat');
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -65,6 +66,13 @@ gulp.task("webp", function () {
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("source/img"));
 });
+
+// gulp.task('scripts', function() {
+//   // return gulp.src('source/js/lib/*.js')
+//   return gulp.src(['./lib/svgxuse.js', './lib/swiper.js'])
+//     .pipe(concat('vendor.js'))
+//     .pipe(gulp.dest('source/js'));
+// });
 
 gulp.task("sprite", function () {
   return gulp.src("source/img/{icon-*,htmlacademy*}.svg")
