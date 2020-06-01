@@ -122,3 +122,10 @@ for (var i = 0, length = listTabs.length; i < length; i++) {
   $tabs(listTabs[i]);
 }
 
+// маска для поля с телефоном
+
+var inputPhone = document.getElementById("phone");
+var maskOptions = {
+  mask: '+{7}(000)000-00-00'
+};
+var phoneMask = IMask(inputPhone, maskOptions);
