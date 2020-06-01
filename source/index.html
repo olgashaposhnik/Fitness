@@ -101,12 +101,12 @@
         <h2>Абонементы</h2>
         <div class="membership__tabs tabs">
           <div class="membership__controls tabs__nav">
-            <a class="membership__tab-title tabs__link tabs__link_active" href="#content-1" tabindex="0">1 месяц</a>
-            <a class="membership__tab-title tabs__link" href="#content-2" tabindex="0">6 месяцев</a>
-            <a class="membership__tab-title tabs__link" href="#content-3" tabindex="0">12 месяцев</a>
+            <a class="membership__tab-title tabs__link tabs__link_active" data-tab="1" href="#content-1" tabindex="0">1 месяц</a>
+            <a class="membership__tab-title tabs__link" href="#content-2" data-tab="2" tabindex="0">6 месяцев</a>
+            <a class="membership__tab-title tabs__link" href="#content-3" data-tab="3" tabindex="0">12 месяцев</a>
           </div>
           <div class="membership__tab-contents tabs__content">
-            <div class="membership__tab-content tabs__pane tabs__pane_show" id="content-1">
+            <div class="membership__tab-content tabs__pane tabs__pane_show" data-tab="1" id="content-1">
               <ul class="membership__tab-list">
                 <li class="membership__item" tabindex="0">
                   <h3 class="membership__header">С тренером</h3>
@@ -128,7 +128,7 @@
                 </li>
               </ul>
             </div>
-            <div class="membership__tab-content tabs__pane" id="content-2">
+            <div class="membership__tab-content tabs__pane" data-tab="2" id="content-2">
               <ul class="membership__tab-list">
                 <li class="membership__item" tabindex="0">
                   <h3 class="membership__header">С тренером</h3>
@@ -150,7 +150,7 @@
                 </li>
               </ul>
             </div>
-            <div class="membership__tab-content tabs__pane" id="content-3">
+            <div class="membership__tab-content tabs__pane" data-tab="3" id="content-3">
               <ul class="membership__tab-list">
                 <li class="membership__item" tabindex="0">
                   <h3 class="membership__header">С тренером</h3>
