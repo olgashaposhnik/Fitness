@@ -1,7 +1,5 @@
 'use strict';
 
-console.log("проверка");
-
 var swiperReviews = new Swiper('.swiper-container', {
   navigation: {
     nextEl: '.reviews__slider__control--right',
@@ -39,9 +37,9 @@ var swiperTtrainers = new Swiper('.swiper-container-trainers', {
 
 // плавная прокрутка к якорю
 
-var anchors = document.querySelectorAll('.anchor')
+var anchors = document.querySelectorAll('.anchor');
 
-anchors.forEach(function (item) {
+[].forEach.call(anchors, function (item) {
   item.addEventListener('click', function (evt) {
     evt.preventDefault();
 
@@ -53,19 +51,6 @@ anchors.forEach(function (item) {
     });
   });
 });
-
-// for (var anchor of anchors) {
-//   anchor.addEventListener('click', function (evt) {
-//     evt.preventDefault()
-
-//     const blockID = anchor.getAttribute('href').substr(1)
-
-//     document.getElementById(blockID).scrollIntoView({
-//       behavior: 'smooth',
-//       block: 'start'
-//     })
-//   })
-// }
 
 // реализация табов
 
@@ -83,110 +68,11 @@ var onLinkClick = function onLinkClick(e) {
   });
 };
 
-links.forEach(function (item) {
-  item.addEventListener("click", onLinkClick);
-});
-
-// links.forEach((item) => {
-//   item.addEventListener(`click`, onLinkClick );
-// });
-
-// [].forEach.call( links, function(item) {
-//   item.addEventListener("click", onLinkClick );
-// });
 
 [].forEach.call( links, function (item) {
-  console.log(`функция работает`);
-  item.addEventListener("click", function(e) {
-    console.log(e.target);
-  });
+  item.addEventListener('click', onLinkClick );
 });
 
-// var links = document.querySelectorAll('.tabs__link');
-// var contents = document.querySelectorAll('.tabs__pane');
-
-// links.forEach(function(link) {
-//   link.addEventListener('click', function() {
-//     var id = this.getAttribute('data-tab');
-//     var content = document.querySelector('.tabs__pane[data-tab="'+id+'"]');
-//     var activeLink = document.querySelector('.tabs__link_active');
-//     var activeContent = document.querySelector('.tabs__pane_show');
-
-//     activeLink.classList.remove('tabs__link_active');
-//     content.classList.add('tabs__pane_show');
-
-//     activeContent.classList.remove('tabs__pane_show');
-//     content.classList.add('tabs__pane_show');
-//   });
-// });
-
-// var $tabs = function (target) {
-//   var
-//     _elemTabs = (typeof target === 'string' ? document.querySelector(target) : target),
-//     _eventTabsShow,
-//     _showTab = function (tabsLinkTarget) {
-//       var tabsPaneTarget, tabsLinkActive, tabsPaneShow;
-//       tabsPaneTarget = document.querySelector(tabsLinkTarget.getAttribute('href'));
-//       tabsLinkActive = tabsLinkTarget.parentElement.querySelector('.tabs__link_active');
-//       tabsPaneShow = tabsPaneTarget.parentElement.querySelector('.tabs__pane_show');
-//       // если следующая вкладка равна активной, то завершаем работу
-//       if (tabsLinkTarget === tabsLinkActive) {
-//         return;
-//       }
-//       // удаляем классы у текущих активных элементов
-//       if (tabsLinkActive !== null) {
-//         tabsLinkActive.classList.remove('tabs__link_active');
-//       }
-//       if (tabsPaneShow !== null) {
-//         tabsPaneShow.classList.remove('tabs__pane_show');
-//       }
-//       // добавляем классы к элементам (в завимости от выбранной вкладки)
-//       tabsLinkTarget.classList.add('tabs__link_active');
-//       tabsPaneTarget.classList.add('tabs__pane_show');
-//       document.dispatchEvent(_eventTabsShow);
-//     },
-//     _switchTabTo = function (tabsLinkIndex) {
-//       var tabsLinks = _elemTabs.querySelectorAll('.tabs__link');
-//       if (tabsLinks.length > 0) {
-//         if (tabsLinkIndex > tabsLinks.length) {
-//           tabsLinkIndex = tabsLinks.length;
-//         } else if (tabsLinkIndex < 1) {
-//           tabsLinkIndex = 1;
-//         }
-//         _showTab(tabsLinks[tabsLinkIndex - 1]);
-//       }
-//     };
-
-//   _eventTabsShow = new CustomEvent('tab.show', { detail: _elemTabs });
-
-//   _elemTabs.addEventListener('click', function (e) {
-//     var tabsLinkTarget = e.target;
-//     // завершаем выполнение функции, если кликнули не по ссылке
-//     if (!tabsLinkTarget.classList.contains('tabs__link')) {
-//       return;
-//     }
-//     // отменяем стандартное действие
-//     e.preventDefault();
-//     _showTab(tabsLinkTarget);
-//   });
-
-//   return {
-//     showTab: function (target) {
-//       _showTab(target);
-//     },
-//     switchTabTo: function (index) {
-//       _switchTabTo(index);
-//     }
-//   }
-
-// };
-
-// $tabs('.tabs');
-
-// var listTabs = document.querySelectorAll('.tabs');
-// for (var i = 0, length = listTabs.length; i < length; i++) {
-//   $tabs(listTabs[i]);
-// }
 
 // маска для поля с телефоном
 
