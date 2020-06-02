@@ -69,8 +69,8 @@ var onLinkClick = function onLinkClick(e) {
 };
 
 
-[].forEach.call( links, function (item) {
-  item.addEventListener('click', onLinkClick );
+[].forEach.call(links, function (item) {
+  item.addEventListener('click', onLinkClick);
 });
 
 
